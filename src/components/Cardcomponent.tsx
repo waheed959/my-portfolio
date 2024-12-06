@@ -32,7 +32,7 @@
 //           </div>
 //         </div>
       
-//         <div className="relative w-full md:w-[430px]  ">
+//         <div className="relative text-center w-full md:w-[430px]  ">
 //         <h1 className="text-2xl mt-3 mb-1 font-serif">{props.imgTitlle}</h1>
 //         <h3 className=" font-bolder mt-1 mb-9 font-mono ">
 //           {props.imgDescription}
@@ -70,20 +70,19 @@ export default function Card(props: Iprops) {
           src={props.ImgSrc}
           alt={props.imgTitlle}
           layout="fill" // adjust height to maintain aspect ratio
-          className="object-contain " // 'object-contain' to prevent cropping
+          className="object-contain" // 'object-contain' to prevent cropping
         />
       
       <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-70 transition-opacity duration-300 rounded-2xl"></div>
         <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
           <Link href={props.projectLink}>
-            <div className="text-center">
+            <div className="text-center r">
               <FaCode className="text-white text-3xl md:text-4xl" />
               <h3 className="text-sm md:text-base"></h3>
             </div>
           </Link>
         </div>
       </div>
-      console.log(props)
       {/* Text Container */}
       <div className="mt-4 text-center px-2">
         <h1 className="text-xl font-serif">{props.imgTitlle}</h1>
